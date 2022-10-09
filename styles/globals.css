@@ -37,3 +37,11 @@ input[type=range]::-webkit-slider-thumb:active {
   background: #18171F;
   border: 2px solid #A4FFAF;
 }
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 2px solid #E6E5EA
+}

@@ -1,4 +1,5 @@
 import React,{ useState } from 'react';
+import Checkbox from './Checkbox';
 import RangeSlider from './RangeSlider';
 
 
@@ -14,6 +15,12 @@ const PasswordSettings = () => {
         <p className="text-[24px] md:text-[32px] leading-4 md:leading-8 text-[#A4FFAF]">{defaultCharValue}</p>
      </div>
      <RangeSlider />
+     <div className="flex flex-col items-start pt-[42px] w-full pl-[16px] md:pl-[32px]">
+        <Checkbox />
+        <Checkbox />
+        <Checkbox />
+        <Checkbox />
+     </div>
     </div>
   )
 }

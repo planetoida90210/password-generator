@@ -19,8 +19,7 @@ const RangeSlider = () => {
         onChange={(e) => ""}
         value={passwordLength}
         style={{background: setSliderBackground()}}
-        className="w-[311px] md:w-[476px] h-[8px] appearance-none" />
-        
+        className="w-[311px] md:w-[476px] h-[8px] appearance-none" /> 
      </div>
   )
 }
