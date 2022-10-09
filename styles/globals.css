@@ -9,3 +9,34 @@
     @apply font-body;
   }
 }
+
+input[type=range] {
+  height: 8px;
+  background: #A4FFAF;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/*webkit*/
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #A4FFAF;
+  margin-top: calc(8px * 0.5 - max(28px * 0.5,2px));
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+  -webkit-appearance: none;
+  color: #13bba4;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  background: #18171F;
+  border: 2px solid #A4FFAF;
+}
