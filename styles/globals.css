@@ -45,3 +45,16 @@ input[type=checkbox] {
   cursor: pointer;
   border: 2px solid #E6E5EA
 }
+
+input[type=checkbox]:hover {
+ border: 2px solid #A4FFAF;
+}
+
+input[type=checkbox]:checked {
+  background-color: #A4FFAF;
+  border: 2px solid #A4FFAF;
+}
+
+input[type=checkbox]:checked::after {
+  content: "✔";
+}
