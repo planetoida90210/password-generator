@@ -23,7 +23,7 @@ const PasswordSettings = ({ rangeValue, setRangeValue, strength, setStrength }) 
         <Checkbox />
      </div>
      <div className="w-full flex justify-center pt-[32px] md:pt-[31px]">
-        <PasswordStrength strength={strength} setStrength={setStrength} />
+        <PasswordStrength strength={strength} setStrength={setStrength} rangeValue={rangeValue} />
      </div>
     </div>
   )

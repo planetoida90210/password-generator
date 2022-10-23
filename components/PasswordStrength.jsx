@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 
 const availableStrengths = [0, 1, 2, 3, 4];
 
@@ -23,8 +23,13 @@ const Rectangle = ({ color }) => {
   return <span className="w-[10px] h-[28px]" style={styles}/>
 };
 
-const PasswordStrength = ({ strength, setStrength }) => {
+const PasswordStrength = ({ strength, setStrength, rangeValue }) => {
   const [strengthColor, setStrengthColor] = useState(strength)
+
+  useEffect(() => {
+    setStrengthColor(strength);
+  }, [strength]);
+
   return (
     <div className="w-[311px] h-[56px] md:w-[476px] md:h-[72px] bg-[#18171F] flex justify-between items-center p-[16px] md:px-[32px]">
         <div className="">
@@ -38,6 +43,7 @@ const PasswordStrength = ({ strength, setStrength }) => {
                 if (level > 0) {
                   return (
                     <Rectangle 
+                     key={level}
                      color={strengthColor >= level ? strengthCharacteristics(strengthColor)?.color : undefined}
                     />
                   )
