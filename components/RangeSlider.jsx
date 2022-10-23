@@ -1,8 +1,8 @@
 import React from 'react'
 
-const RangeSlider = () => {
+const RangeSlider = ({rangeValue, setRangeValue}) => {
   
-    const passwordLength = 3
+    const passwordLength = rangeValue
 
     const bgSlider = (passwordLength * 100) / 20
   
@@ -16,7 +16,7 @@ const RangeSlider = () => {
         min="0"
         max="20"
         type="range"
-        onChange={(e) => ""}
+        onChange={(e) => setRangeValue(e.target.value)}
         value={passwordLength}
         style={{background: setSliderBackground()}}
         className="w-[311px] md:w-[476px] h-[8px] appearance-none" /> 
