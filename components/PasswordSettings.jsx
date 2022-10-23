@@ -4,7 +4,7 @@ import PasswordStrength from './PasswordStrength';
 import RangeSlider from './RangeSlider';
 
 
-const PasswordSettings = ({rangeValue, setRangeValue}) => {
+const PasswordSettings = ({ rangeValue, setRangeValue, strength, setStrength }) => {
     
   
 
@@ -23,7 +23,7 @@ const PasswordSettings = ({rangeValue, setRangeValue}) => {
         <Checkbox />
      </div>
      <div className="w-full flex justify-center pt-[32px] md:pt-[31px]">
-        <PasswordStrength />
+        <PasswordStrength strength={strength} setStrength={setStrength} />
      </div>
     </div>
   )
