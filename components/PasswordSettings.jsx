@@ -1,4 +1,5 @@
 import React,{ useState } from 'react';
+import Button from './Button';
 import Checkbox from './Checkbox';
 import PasswordStrength from './PasswordStrength';
 import RangeSlider from './RangeSlider';
@@ -26,6 +27,9 @@ const PasswordSettings = ({ rangeValue, setRangeValue, strength, setStrength, op
      </div>
      <div className="w-full flex justify-center pt-[32px] md:pt-[31px]">
         <PasswordStrength strength={strength} setStrength={setStrength} rangeValue={rangeValue} />
+     </div>
+     <div className="w-full flex justify-center pt-[16px] md:pt-[31px]" >
+         <Button />
      </div>
     </div>
   )
