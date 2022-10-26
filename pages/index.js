@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 
 import PasswordCopyboard from "../components/PasswordCopyboard"
 import PasswordSettings from "../components/PasswordSettings"
+import { measureStrength } from "../utils/passwordUtils"
 
 const checkboxOptions = [
   { type: 'upperCase', title: 'include uppercase letters' },
@@ -15,6 +16,10 @@ const Home = () => {
   const [ rangeValue, setRangeValue ] = useState(0);
   const [ strength, setStrength ] = useState(0);
   const [options, setOptions] = useState({ upperCase: false, lowerCase: false, numbers: false, symbols: false });
+
+  useEffect(() => {
+    setStrength(measureStrength({length: rangeValue, options}));
+  },[options, rangeValue]);
 
   return (
     <div className="h-screen font-body bg-[#18171F] overflow-hidden text-jetBrains font-bold flex flex-col justify-start items-center pt-[64px] md:pt-[133px] xl:pt-[150px]">
