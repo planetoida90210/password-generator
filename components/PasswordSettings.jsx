@@ -5,7 +5,7 @@ import PasswordStrength from './PasswordStrength';
 import RangeSlider from './RangeSlider';
 
 
-const PasswordSettings = ({ rangeValue, setRangeValue, strength, setStrength, options, setOptions, checkboxOptions }) => {
+const PasswordSettings = ({ rangeValue, setRangeValue, strength, setStrength, options, setOptions, checkboxOptions, generatePassword, setGeneratedPassword, measureStrength }) => {
     
   
   return (
@@ -29,7 +29,10 @@ const PasswordSettings = ({ rangeValue, setRangeValue, strength, setStrength, op
         <PasswordStrength strength={strength} setStrength={setStrength} rangeValue={rangeValue} />
      </div>
      <div className="w-full flex justify-center pt-[16px] md:pt-[31px]" >
-         <Button />
+         <Button 
+          isDisabled={measureStrength({length: rangeValue, options}) === 0}
+          onClick={() => setGeneratedPassword(generatePassword({length: rangeValue, options}))} 
+          />
      </div>
     </div>
   )

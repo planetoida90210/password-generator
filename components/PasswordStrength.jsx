@@ -7,9 +7,6 @@ const strengthCharacteristics = (strength) => {
     case 1:
       return { title: 'Too Weak!', color: '#F64A4A' };
     case 2:
-      if(rangeValue > 5) {
-        setStrength(1)
-      }
       return { title: 'weak', color: '#FB7C58' };
     case 3:
       return { title: 'medium', color: '#F8CD65' };
@@ -31,7 +28,7 @@ const PasswordStrength = ({ strength, setStrength, rangeValue, options }) => {
 
   useEffect(() => {
     setStrengthColor(strength);
-  }, [strength]);
+  }, [strength, rangeValue]);
 
 
   return (

@@ -21,8 +21,8 @@ export const generatePassword = ({ length = 6, options }) => {
   
     const numberOfChecked = (Number(upperCase) + Number(lowerCase) + Number(numbers) + Number(symbols));
   
-    if (length < 0 || numberOfChecked === 0) return 0;
-    if (length < 6) return 1;
+    if (length < 5 || numberOfChecked === 0) return 0;
+    if ((length <= 5 || numberOfChecked === 1)) return 1;
     if (length < 12 && numberOfChecked <= 2) return 2;
     if ((length < 12 && numberOfChecked > 2) || (length >= 12 && numberOfChecked <= 2)) return 3;
     if (length >= 12 && numberOfChecked > 2) return 4;
