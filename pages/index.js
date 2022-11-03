@@ -40,7 +40,11 @@ const Home = () => {
         Password Generator
       </h1>
       <section>
-        <PasswordCopyboard showCopied={showCopied} setShowCopied={setShowCopied} generatedPassword={generatedPassword} />
+        <PasswordCopyboard 
+         showCopied={showCopied} 
+         setShowCopied={setShowCopied} 
+         setGeneratedPassword={setGeneratedPassword} 
+         generatedPassword={generatedPassword} />
       </section>
       <section>
         <PasswordSettings 
