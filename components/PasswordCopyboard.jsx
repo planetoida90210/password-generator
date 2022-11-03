@@ -7,7 +7,7 @@ const PasswordCopyboard = ({showCopied, setShowCopied, generatedPassword}) => {
   return (
     <div className="flex w-[343px] h-[64px] text-center md:w-[540px] md:h-[80px] bg-[#24232C] mt-4 md:mt-8 rounded-md">
         <input
-         readOnly
+         value={generatedPassword}
          type="text"
          autoCapitalize="off"
          placeholder="P4$5W0rD!"
