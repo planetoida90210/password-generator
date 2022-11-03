@@ -23,7 +23,7 @@ const Rectangle = ({ color }) => {
   return <span className="w-[10px] h-[28px]" style={styles}/>
 };
 
-const PasswordStrength = ({ strength, setStrength, rangeValue, options }) => {
+const PasswordStrength = ({ strength, rangeValue }) => {
   const [strengthColor, setStrengthColor] = useState(strength)
 
   useEffect(() => {

@@ -32,7 +32,6 @@ const Home = () => {
     }
   }, [showCopied, generatedPassword]);
 
-  console.log(generatedPassword);
 
   return (
     <div className="h-screen font-body bg-[#18171F] overflow-hidden text-jetBrains font-bold flex flex-col justify-start items-center pt-[64px] md:pt-[133px] xl:pt-[150px]">
